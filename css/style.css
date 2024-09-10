@@ -141,115 +141,160 @@ input, textarea {
 }
 
 
-/* Add a gradient background to the body */
-body {
-    background: linear-gradient(to right, #f0f4f7, #c8d9e9);
-}
 
-/* Update the h1 to have a vibrant color and a text shadow */
-h1 {
-    color: #0056b3; /* Vibrant blue */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
-}
 
-/* Add vibrant hover effect to the navigation links */
-nav a {
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+
+h1, h2 {
+    font-family: 'Modak', cursive;
+    color: #ff5722; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #ff5722; /* Vibrant orange on hover */
+
+h1:hover, h2:hover {
+    color: #e91e63; 
 }
 
-/* Update the h2 to have a more colorful appearance */
-h2 {
-    color: #2c3e50; /* Dark blue-gray */
-    border-bottom: 2px solid #ff5722; /* Orange border underline */
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+
+hr {
+    height: 4px;
+    border: 0;
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    margin: 20px 0;
 }
 
-/* Add box shadows and hover effects to the card elements */
+
+a {
+    position: relative;
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #e91e63;
+    text-decoration: underline;
+}
+
+
 .card {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #ff5722;
+    box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+    transform: translateY(-10px); 
 }
 
-/* Style the buttons and make them vibrant */
+
 button {
-    background-color: #ff5722;
+    background: linear-gradient(45deg, #ff5722, #e91e63);
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #e64a19;
-    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    transform: scale(1.1);
 }
 
-/* Style the images inside cards to have a subtle hover effect */
-.card img {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
 
-.card img:hover {
-    transform: scale(1.05);
-}
-
-/* Add a colorful border to the footer and more prominent icons */
 footer {
-    border-top: 4px solid #ff5722;
-    padding-top: 10px;
+    background: linear-gradient(to right, #ff5722, #e91e63);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer a {
-    color: #ff5722;
+    color: white;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #ff9800;
 }
 
-/* Style the section breaks with a vibrant color */
-hr {
-    border: 0;
-    height: 3px;
-    background: #ff5722;
-    margin: 20px 0;
+
+.splash {
+    animation: splashFadeIn 1s ease-out;
 }
 
-/* Add a hover effect to all the list items in the Skills section */
+@keyframes splashFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 ul li {
-    list-style-type: disc;
-    margin-left: 20px;
+    margin: 5px 0;
     transition: color 0.3s ease;
 }
 
 ul li:hover {
-    color: #ff5722;
+    color: #e91e63;
+    transform: translateX(5px);
 }
 
-/* Add a colorful gradient to the splash section background */
+
 .splash {
-    background: linear-gradient(to bottom right, #ff5722, #ffc107);
+    background: linear-gradient(135deg, #ff5722, #ff9800);
     color: white;
-    padding: 40px;
+    padding: 50px;
+    border-radius: 10px;
 }
 
 .splash h1, .splash p {
     color: white;
 }
+
+.card img {
+    border: 5px solid;
+    border-image: linear-gradient(to right, #ff5722, #ff9800) 1;
+    transition: border-image 0.3s ease;
+}
+
+.card img:hover {
+    border-image: linear-gradient(to right, #e91e63, #ff5722) 1;
+}
+
